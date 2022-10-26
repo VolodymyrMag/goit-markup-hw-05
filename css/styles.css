@@ -140,10 +140,8 @@ ul {list-style: none;} */
     margin-left: 93px;
     
 }
-
-.current {
-    ??????????????????????????????????????????????????????????????
-}
+/* --------------------------------- */
+/* .current  */
 
 .site-nav .current.link::after {
     content: "";
@@ -879,6 +877,11 @@ padding: 30px 30px 0px 30px;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+
+/* --------------------------------------------------------- */
+
+
+
 .filter-list {
     display: flex;
     flex-wrap: wrap;
@@ -890,10 +893,13 @@ padding: 30px 30px 0px 30px;
 /* calc((100% - сумма маржинов в строке(или кол-во маржинов в строке помноженое на значение маржина в px)) / на количество елементов в строке*/
 .filter-card {
     /* width: 370px; */
+    
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
     background: var(--accent-color-two);
+    
+
 }
 
 .filter-card:nth-child(3n) {
@@ -919,12 +925,22 @@ padding: 30px 30px 0px 30px;
 
 .link-portfolio {
     display: block;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.link-portfolio:hover .filter-description,  
+.link-portfolio:focus {
+     transform: translateY(0);
+    
 }
 
 .link-portfolio:hover,
 .link-portfolio:focus {
-    background-color: var(--primary-background-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    
+    
 }
 
 .filter-card-div {
@@ -934,6 +950,7 @@ padding: 30px 30px 0px 30px;
 }
 
 .section-title-portfolio {
+    
     margin-bottom: 4px;
     color: var(--title-text-color);
     font-weight: 700;
@@ -943,6 +960,7 @@ padding: 30px 30px 0px 30px;
 }
 
 .section-title-portfolio-text {
+    
     color: var(--primary-text-color);
     font-weight: 400;
     font-size: 16px;
@@ -950,8 +968,32 @@ padding: 30px 30px 0px 30px;
     letter-spacing: 0.03em;
   }
 
+.filter-description {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 110px) ;
+    padding: 63px 24px 173px 24px;
+    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--accent-color-two);  
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(calc(100% + 110px));
+    transition: 250ms;
+}
+
+
+
+
+
 /* продолжаем */
-/* на проверку ДЗ-4 */
+/* на проверку ДЗ-5 */
 
 
 
