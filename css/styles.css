@@ -170,6 +170,7 @@ ul {list-style: none;} */
 .site-nav .link:focus {
     color: var(--accent-color);
     opacity: 1;
+    transition: color 250ms;
 }
 
 .site-nav .link.current{
@@ -196,12 +197,12 @@ ul {list-style: none;} */
 }
 
 .link-icon {
-     
-fill: var(--primary-text-color);
+    fill: var(--primary-text-color);
 }
 
 .link:hover .link-icon {
-    fill: var(--accent-color)
+    fill: var(--accent-color);
+    transition: fill 250ms;
 }
 
 /* .net-icon:hover {
@@ -242,10 +243,12 @@ fill: var(--primary-text-color);
 .connection .link:hover,
 .connection .link:focus {
     fill: var(--accent-color);
+    transition: fill 250ms;
 }
 
 .link:focus .link-icon {
     fill: var(--accent-color);
+    transition: fill 250ms;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
@@ -301,16 +304,20 @@ fill: var(--primary-text-color);
     letter-spacing: 0.02em;
     border-radius: 4px;
 
+
+    
     cursor: pointer;
 }
 
 .button:hover,
 .button:active {
-    background-color: var(--button-background-active-color);
+    background-color: var(--button-background-active-color); 
+    transition: background-color  250ms;
 }
 
 .button:focus {
-    background-color: var(--button-background-active-color);    
+    background-color: var(--button-background-active-color);   
+    transition: background-color  250ms;
 }
 
 /* ----------------------------------------------------------- */
@@ -339,11 +346,13 @@ fill: var(--primary-text-color);
     left: 50%;
     transform: translate(-50%, -50%);
     width: 528px;
-    height: 581px;
+    max-height: 581px;
+    height: 100%;
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     position: relative;
+    overflow: auto;
   
 }
 
@@ -514,7 +523,7 @@ fill: var(--primary-text-color);
 }
 
 .team-div {
-padding: 30px 30px 0px 30px;
+    padding: 30px 30px 0px 30px;
 }
 
 .team-img {
@@ -561,23 +570,28 @@ padding: 30px 30px 0px 30px;
 
 .net-icon:hover {
     fill: white;
+    transition: fill 250ms;
 }
 
 .soc-link:hover,
 .soc-link:focus {
     background-color: #2196F3; 
+    transition: background-color 250ms;
 }
 
 .soc-link:hover .net-icon {
     fill: white;
+    transition: fill 250ms;
 }
 
 .soc-link:focus .net-icon {
     fill: white;
+    transition: fill 250ms;
 }
 
 .net-icon {
      fill: var(--icon-color) ;
+    transition: fill 250ms;
 }
 
 /* ---------------------------------------------------------------- */
@@ -625,13 +639,14 @@ padding: 30px 30px 0px 30px;
 /* SVG */
 .clients-icon {
     fill: var(--icon-color);
+    transition: fill 250ms;
 }
 
 .clients-button:hover .clients-icon,
 .clients-button:focus .clients-icon
 {
     fill: var(--accent-color);
-     
+    transition: fill 250ms;
 }
 
 .clients-item:hover .clients-button,
@@ -639,6 +654,7 @@ padding: 30px 30px 0px 30px;
 {
     fill: var(--accent-color);
     border: 1px solid var(--accent-color);
+    transition: fill 250ms border 250ms;
 }
 
 /* 
@@ -737,12 +753,14 @@ padding: 30px 30px 0px 30px;
 
 .link:hover,
 .link:focus {
-    color: var(--accent-color)
+    color: var(--accent-color);
+    transition: color 250ms;
 }
 
 .map-link:hover,
 .map-link:focus {
-    color: var(--accent-color)
+    color: var(--accent-color);
+    transition: color 250ms;
 }
 
 /* ----------------------------------------------------------- */
@@ -782,22 +800,26 @@ padding: 30px 30px 0px 30px;
 .footer-net-icon:focus
 {
     fill: white;
+    transition: fill 250ms;
 }
 
 .footer-soc-link:hover,
 .footer-soc-link:focus
  {
     background-color: #2196F3;
+    transition: background-color 250ms;
 }
 
 .footer-soc-link:hover .net-icon, 
 .footer-soc-link:focus
 {
     fill: white;
+    transition: fill 250ms;
 }
 
 .footer-net-icon {
     fill: var(--icon-color-two);
+    transition: fill 250ms;
 }
 
 
@@ -868,6 +890,8 @@ padding: 30px 30px 0px 30px;
     border-radius: 4px;
     
     cursor: pointer;
+    
+   
 }
 
 .button-portfolio:hover, 
@@ -875,6 +899,8 @@ padding: 30px 30px 0px 30px;
     color: var(--button-text-color);
     background-color: var(--button-background-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: color 250ms, background-color 250ms, box-shadow 250ms ;
+    
 }
 
 
@@ -933,13 +959,15 @@ padding: 30px 30px 0px 30px;
 .link-portfolio:hover .filter-description,  
 .link-portfolio:focus {
      transform: translateY(0);
+     
     
 }
 
 .link-portfolio:hover,
 .link-portfolio:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    
+    transition: box-shadow 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -947,6 +975,7 @@ padding: 30px 30px 0px 30px;
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: none;
+    
 }
 
 .section-title-portfolio {
@@ -986,6 +1015,7 @@ padding: 30px 30px 0px 30px;
 
     transform: translateY(calc(100% + 110px));
     transition: 250ms;
+    
 }
 
 
