@@ -651,6 +651,7 @@ ul {list-style: none;} */
 }
 /* A */
 .clients-button {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -667,43 +668,14 @@ ul {list-style: none;} */
   transition: fill 250ms;
 }
 
+.clients-button:hover, 
+.clients-button:focus {
+  border: 1px solid var(--accent-color)
+}
 .clients-button:hover .clients-icon,
 .clients-button:focus .clients-icon {
   fill: var(--accent-color);
-   
 }
-
-.clients-item:hover .clients-button,
-.clients-item:focus .clients-button {
-  fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  
-}
-
-/* 
-.clients-button:hover .clients-icon,
-.clients-button:active {
-    fill: var(--accent-color);
-    cursor: pointer;
-}
-
-.clients-button:focus .clients-icon {
-    fill: var(--accent-color);
-    cursor: pointer;
-}
-
-.clients-item:hover .clients-button,
-.clients-item:active {
-    fill: var(--accent-color);
-    border: 1px solid var(--accent-color);
-    cursor: pointer;
-}
-
-.clients-item:focus .clients-icon {
-    fill: var(--accent-color);
-    border: 1px solid var(--accent-color);
-    cursor: pointer;
-}  */
 
 /* ---------------------------------------------------------------------------------------------------------- */
 
@@ -930,6 +902,7 @@ ul {list-style: none;} */
 
 /* ще є третій варіант метод calc так и сделал */
 /* calc((100% - сумма маржинов в строке(или кол-во маржинов в строке помноженое на значение маржина в px)) / на количество елементов в строке*/
+
 .filter-card {
   /* width: 370px; */
   width: calc((100% - 60px) / 3);
@@ -961,34 +934,25 @@ ul {list-style: none;} */
     margin-bottom: 30px;
 } */
 
-.link-portfolio 
+.link-portfolio {
+  display: block;
+}
 
 .link-img {
   display: block;
   position: relative;
   overflow: hidden;
+}
+
+.link-portfolio:hover,
+.link-portfolio:focus  {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.link-portfolio:hover .filter-description,
+.link-portfolio:focus .filter-description {
+  transform: translateY(0);
   
-}
-
-
-
-.filter-card:hover .filter-description {
-  transform: translateY(0);
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.filter-card:focus .filter-description {
-  transform: translateY(0);
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.filter-card:hover,
-.filter-card:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-
 }
 
 .filter-card-div {
@@ -1015,6 +979,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
 }
 
 .filter-description {
+   
   display: flex;
   align-items: center;
   position: absolute;
